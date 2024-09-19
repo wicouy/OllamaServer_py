@@ -13,7 +13,7 @@ Este proyecto es un bot basado en Flask que se comunica con una instancia local 
 1. **Clona el repositorio:**
 
    ```bash
-   git clone https://github.com/tu_usuario/ollama-flask-bot.git
+   git clone https://github.com/wicouy/ollama-flask-bot.git
    cd ollama-flask-bot
    ```
 
