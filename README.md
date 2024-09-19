@@ -89,6 +89,56 @@ Este proyecto es un bot basado en Flask que se comunica con una instancia local 
 - **Configuración del Modelo**: Puedes ajustar los parámetros del modelo en el archivo `config.json` bajo la clave `"model_config"`.
 - **Endpoint y URL de Ollama**: Asegúrate de que la URL de Ollama y el endpoint estén correctamente configurados en el archivo `config.json`.
 
+## Requisitos Adicionales Obligatorios
+
+- **Ollama**: Es obligatorio tener Ollama instalado y configurado con el modelo adecuado, como `gemma2:2b` en este caso pero puedes usar el modelo que mas se adapte a tus necesidades.
+
+## Instalación de Ollama
+
+### Windows
+
+1. Descarga el instalador de Ollama desde el sitio oficial.
+2. Ejecuta el instalador y sigue las instrucciones en pantalla.
+3. Una vez instalado, abre la terminal de comandos (CMD) y verifica la instalación con:
+   ```bash
+   ollama --version
+   ```
+4. Descarga el modelo necesario:
+   ```bash
+   ollama download gemma2:2b
+   ```
+
+### macOS
+
+1. Instala Ollama utilizando Homebrew:
+   ```bash
+   brew install ollama
+   ```
+2. Verifica la instalación:
+   ```bash
+   ollama --version
+   ```
+3. Descarga el modelo necesario:
+   ```bash
+   ollama download gemma2:2b
+   ```
+
+### Linux
+
+1. Descarga el binario de Ollama desde el sitio oficial o utiliza el gestor de paquetes de tu distribución (si está disponible).
+2. Otorga permisos de ejecución:
+   ```bash
+   chmod +x ollama
+   ```
+3. Verifica la instalación:
+   ```bash
+   ./ollama --version
+   ```
+4. Descarga el modelo necesario:
+   ```bash
+   ./ollama download gemma2:2b
+   ```
+
 ## Contribuciones
 
 Las contribuciones son bienvenidas. Si encuentras algún problema
