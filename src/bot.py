@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import requests
 import json
 import os
+import time
 
 # Cargar la configuración desde config.json
 config_path = os.path.join(os.path.dirname(__file__), 'config.json')
@@ -53,4 +54,10 @@ def consultar():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, host=FLASK_HOST, port=FLASK_PORT)
+    while True:
+        try:
+            app.run(debug=True, host=FLASK_HOST, port=FLASK_PORT)
+        except Exception as e:
+            print(f"Error detectado: {e}")
+            print("Reiniciando la aplicación en 5 segundos...")
+            time.sleep(5)
